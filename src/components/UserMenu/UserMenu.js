@@ -10,9 +10,8 @@ const Wrapper = styled.div`
 `;
 
 const Username = styled.p`
-  .username {
-    font-weight: 700;
-  `;
+  font-weight: 700;
+`;
 
 export const UserMenu = () => {
   const dispatch = useDispatch();
@@ -20,7 +19,7 @@ export const UserMenu = () => {
 
   return (
     <Wrapper>
-      <Username>Welcome, {user.name}</Username>
+      <Username>Hello, {user.email}</Username>
       <button type="button" onClick={() => dispatch(logOut())}>
         Logout
       </button>
