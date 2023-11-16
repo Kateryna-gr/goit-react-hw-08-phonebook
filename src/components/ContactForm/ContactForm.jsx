@@ -1,9 +1,9 @@
 import { ErrorMessage, Field, Formik } from 'formik';
 import * as Yup from 'yup';
-import { Button, StyledForm } from 'components/contact-form/form.styled';
+import { Button, StyledForm } from 'components/ContactForm/ContactForm.styled';
 import { useDispatch, useSelector } from 'react-redux';
-import { addContact } from 'redux/operations';
-import { selectContacts } from 'redux/selectors';
+import { addContact } from 'redux/contacts/operations';
+import { selectContacts } from 'redux/contacts/selectors';
 
 const ContactSchema = Yup.object().shape({
   name: Yup.string('Invalid name').required('Enter name'),
