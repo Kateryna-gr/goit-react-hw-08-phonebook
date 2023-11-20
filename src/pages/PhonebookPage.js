@@ -3,13 +3,13 @@ import { ContactList } from 'components/ContactsList/ContactList';
 // import { Filter } from 'components/Filter/Filter';
 import styled from 'styled-components';
 
- const Container = styled.div`
+const Container = styled.div`
   width: 460px;
   margin: 60px auto;
   padding: 20px;
 `;
 
-export const Phonebook = () => {
+export default function Phonebook() {
   return (
     <Container>
       <h2>Phonebook</h2>
@@ -19,4 +19,4 @@ export const Phonebook = () => {
       <ContactList />
     </Container>
   );
-};
+}
