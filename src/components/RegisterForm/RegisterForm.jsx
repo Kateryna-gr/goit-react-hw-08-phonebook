@@ -1,9 +1,10 @@
 import { useDispatch } from 'react-redux';
-import { logIn } from 'redux/auth/operations';
+import { register } from 'redux/auth/operations';
 import styled from 'styled-components';
 
 const Form = styled.form`
   width: 320px;
+  margin: 0 auto;
 `;
 const Label = styled.label`
   display: flex;
@@ -11,14 +12,15 @@ const Label = styled.label`
   margin-bottom: 16px;
 `;
 
-export const LoginForm = () => {
+export const RegisterForm = () => {
   const dispatch = useDispatch();
 
   const handleSubmit = e => {
     e.preventDefault();
     const form = e.currentTarget;
     dispatch(
-      logIn({
+      register({
+        name: form.elements.name.value,
         email: form.elements.email.value,
         password: form.elements.password.value,
       })
@@ -29,6 +31,10 @@ export const LoginForm = () => {
   return (
     <Form onSubmit={handleSubmit} autoComplete="off">
       <Label>
+        Username
+        <input type="text" name="name" />
+      </Label>
+      <Label>
         Email
         <input type="email" name="email" />
       </Label>
@@ -36,7 +42,7 @@ export const LoginForm = () => {
         Password
         <input type="password" name="password" />
       </Label>
-      <button type="submit">Log In</button>
+      <button type="submit">Register</button>
     </Form>
   );
 };

@@ -16,7 +16,13 @@ body {
       monospace;
   }
 
+  h1{
+    text-align: center;
+    margin: 60px auto 20px;
+  }
+
   h2{
+    margin-top: 0;
     margin-bottom: 10px;
   }
 

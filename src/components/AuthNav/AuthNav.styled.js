@@ -12,12 +12,3 @@ export const LinkNav = styled(NavLink)`
     color: #e84a5f;
   }
 `;
-
-export const AuthNav = () => {
-  return (
-    <div>
-      <LinkNav to="/register">Register</LinkNav>
-      <LinkNav to="/login">Log In</LinkNav>
-    </div>
-  );
-};
