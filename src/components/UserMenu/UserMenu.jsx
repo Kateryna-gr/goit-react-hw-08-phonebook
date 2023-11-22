@@ -1,3 +1,4 @@
+import { StyledButton } from 'components/ContactForm/ContactForm.styled';
 import { useDispatch } from 'react-redux';
 import { logOut } from 'redux/auth/operations';
 import { useAuth } from 'redux/auth/useAuthHook';
@@ -20,9 +21,9 @@ export const UserMenu = () => {
   return (
     <Wrapper>
       <Username>Hello, {user.email}</Username>
-      <button type="button" onClick={() => dispatch(logOut())}>
+      <StyledButton type="button" onClick={() => dispatch(logOut())}>
         Log Out
-      </button>
+      </StyledButton>
     </Wrapper>
   );
 };
