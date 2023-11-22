@@ -1,6 +1,6 @@
 import { ContactForm } from 'components/ContactForm/ContactForm';
 import { ContactList } from 'components/ContactsList/ContactList';
-// import { Filter } from 'components/Filter/Filter';
+import { Filter } from 'components/Filter/Filter';
 import styled from 'styled-components';
 
 const Container = styled.div`
@@ -15,7 +15,7 @@ export default function Phonebook() {
       <h2>Phonebook</h2>
       <ContactForm />
       <h2>Contacts</h2>
-      {/* <Filter /> */}
+      <Filter />
       <ContactList />
     </Container>
   );

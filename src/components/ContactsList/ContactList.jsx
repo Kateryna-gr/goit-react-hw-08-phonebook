@@ -28,7 +28,7 @@ export const ContactList = () => {
             <li key={contact.id}>
               <Contact
                 name={contact.name}
-                phone={contact.phone}
+                phone={contact.number}
                 id={contact.id}
               />
             </li>
