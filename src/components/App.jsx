@@ -6,6 +6,7 @@ import { PrivateRoute } from './PrivateRoute';
 import { RestrictedRoute } from './RestrictedRoute';
 import { refreshUser } from 'redux/auth/operations';
 import { useAuth } from 'redux/auth/useAuthHook';
+import NotFound from 'pages/NotFoundPage';
 
 const HomePage = lazy(() => import('pages/HomePage'));
 const RegisterPage = lazy(() => import('pages/RegisterPage'));
@@ -44,6 +45,7 @@ export const App = () => {
             <PrivateRoute redirectTo="/login" component={<PhonebookPage />} />
           }
         />
+        <Route path="*" element={<NotFound />} />
       </Route>
     </Routes>
   );
